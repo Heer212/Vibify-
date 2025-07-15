@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER  -->
+    <nav>
+        <ul>
+            <li class="brand">
+                <img src="icons/spotify-logo-png-7080.png" alt="Spotify">Vibify
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About </a></li>
+            <li class="search">
+                <input type="text"  class="searchText"  placeholder="Search"  id="searchBox">
+                <i class="fas fa-search" id="searchIcon"></i>
+            </li>
+            
+            <li class="profile">
+                <a id="viewFavoritesBtn">View Favorites</a>
+                <img src="images/bg1.png" alt="" >
+                <!-- <span>User</span> -->
+            </li>
+        </ul>
+    </nav>
+
+    <!-- SEARCH REULTS  -->
+    <div id="results">
+        <audio id="audioPlayer" controls style="display: none;"></audio>
+    </div>
+
+    <!-- CONTENT  -->
+    <div class="container">
+        <div class="songList">
+            <h1>Hello Heer!</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="images/apna bana le piya2.jpg" alt="1">
+                    <span class="songName">Apna bana le</span>
+                    <span class="songListplay">
+                        <span class="timestamp">04:32 
+                        <i class="far songItemPlay fa-play-circle" data-index="0"></i>
+                        <i class="far fa-heart favorite-icon" data-index="0"></i>
+                        </span>
+                    </span>
+                </div>
+                
+                <div class="songItem">
+                    <img src="images/shiddat_song.png" alt="1">
+                    <span class="songName">Shiddat</span>
+                    <span class="songListplay">
+                        <span class="timestamp">04:50 
+                        <i class="far songItemPlay fa-play-circle" data-index="1"></i>
+                        <i class="far fa-heart favorite-icon" data-index="1"></i>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img src="images/tum_se_hi.png" alt="1">
+                    <span class="songName">Tum se hi</span>
+                    <span class="songListplay">
+                        <span class="timestamp">05:23 
+                        <i class="far songItemPlay fa-play-circle" data-index="2"></i>                        
+                        <i class="far fa-heart favorite-icon" data-index="2"></i>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img src="images/tera_hone.png" alt="1">
+                    <span class="songName">Tera hone laga hoon</span>
+                    <span class="songListplay">
+                        <span class="timestamp">04:46 
+                        <i class="far songItemPlay fa-play-circle" data-index="3"></i>
+                        <i class="far fa-heart favorite-icon" data-index="3"></i>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img src="images/vhalam_avo_ne.png" alt="1">
+                    <span class="songName">Vhalam avo ne</span>
+                    <span class="songListplay">
+                        <span class="timestamp">04:40 
+                        <i class="far songItemPlay fa-play-circle" data-index="4"></i>
+                        <i class="far fa-heart favorite-icon" data-index="4"></i>                        
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img src="images/shershaah.jpeg" alt="1">
+                    <span class="songName">Shershaah</span>
+                    <span class="songListplay">
+                        <span class="timestamp">03:46 
+                        <i class="far songItemPlay fa-play-circle" data-index="5"></i>
+                        <i class="far fa-heart favorite-icon" data-index="5"></i>                        
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img src="images/aayi_nai.png" alt="1">
+                    <span class="songName">Aayi nai</span>
+                    <span class="songListplay">
+                        <span class="timestamp">05:13 
+                        <i class="far songItemPlay fa-play-circle" data-index="6"></i>
+                        <i class="far fa-heart favorite-icon" data-index="6"></i>                        
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img src="images/Tum_se.jpg" alt="1">
+                    <span class="songName">Tum se</span>
+                    <span class="songListplay">
+                        <span class="timestamp">04:46 
+                        <i class="far songItemPlay fa-play-circle" data-index="7"></i>
+                        <i class="far fa-heart favorite-icon" data-index="7"></i>
+                        </span>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        <!-- <div class="songDetailPanel">
+            <img src="images/apna bana le piya2.jpg" alt="Song Cover" id="songDetailImage">
+            <div class="songDescription">
+                <h2 id="songTitle">Apna Bana Le</h2>
+                <p id="songText">Click a song to see its details here</p>
+            </div>
+        </div> -->
+        <div class="songBanner"></div>
+     </div>
+
+     <!-- FOOTER  -->
+
+    <div class="bottom">
+            <input type="range" name="range" id="myProgressBar" min="0"  max="100">
+            <div class="iconss">
+                        <!-- fontawesome icon -->
+                <i class="fas fa-3x fa-step-backward" id="previous"></i>
+                <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+                <i class="fas fa-3x fa-step-forward" id="next"></i>
+            </div>
+
+            <div class="songInfo">
+                <img src="images/music.gif" width="42px" alt="" id="gif" > <span id="masterSongName">Apna Bana Le - Bhediya</span>
+            </div>
+    </div>
+   
+
+    <script src="https://kit.fontawesome.com/b1834a7c48.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
